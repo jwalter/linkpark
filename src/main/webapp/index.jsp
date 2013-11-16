@@ -8,13 +8,17 @@
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+div
+{
+font-size: 14pt;
+font-family: Helvetica;
+}
 .parking-area-name
 {
 background-color:#d0e4fe;
 }
 .parking-area-spaces
 {
-display:inline;
 color:orange;
 }
 </style>
