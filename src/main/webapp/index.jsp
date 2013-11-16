@@ -10,16 +10,29 @@
 <style>
 div
 {
-font-size: 14pt;
+font-size: 18pt;
 font-family: Helvetica;
+}
+.parking-area
+{
+background-color:#ffffff;
+}
+.parking-area:nth-child(odd)
+{
+    background:#ffffff;
+}
+.parking-area:nth-child(even)
+{
+    background:#eeeeee;
 }
 .parking-area-name
 {
-background-color:#d0e4fe;
+display:inline;
 }
 .parking-area-spaces
 {
-color:orange;
+display:inline;
+float: right;
 }
 </style>
 <!-- /// -->
@@ -37,14 +50,16 @@ color:orange;
 				var jsn = eval('(' + xmlhttp.responseText + ')');
 				var parkingAreas = jsn.ParkingAreaUpdateList;
 				var s = "";
-				for (var i = 0; i < parkingAreas.length; i++) {
+				for (var i = 0; i < 8; i++) {
 					var parkingArea = parkingAreas[i];
 					if (parkingArea.Id.indexOf('_1') != -1) {
+						s += "<div class='parking-area'>"
 						s += "<div class='parking-area-name'>";
 						s += parkingArea.Name;
 						s += "</div>";
 						s += "<div class='parking-area-spaces'>";
 						s += parkingArea.ParkingSpacesAvailable;
+						s += "</div>";
 						s += "</div>";
 					}
 				}
