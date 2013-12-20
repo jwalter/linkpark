@@ -3,3 +3,9 @@
 .settings
 .springBeans
 target
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
