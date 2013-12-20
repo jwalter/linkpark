@@ -7,7 +7,6 @@
 
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="refresh" content="30">
 <style>
 div {
 	font-size: 18pt;
@@ -75,6 +74,7 @@ div {
 		xmlhttp.open("GET", "hello", true);
 		xmlhttp.send();
 	}
+	setInterval("loadXMLDoc()", 30000);
 // -->
 </script>
 </head>
